@@ -1,13 +1,13 @@
 from langchain_core.messages import HumanMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.tools import Tool
+from langchain.tools import tool
 from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
-# @tool
+@tool
 def calculator_tool(a:float, b:float) -> str:
     """
     Useful for performing basic arithmetic calculations.
